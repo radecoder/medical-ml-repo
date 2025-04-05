@@ -1,176 +1,93 @@
-<!-- templates/home.html -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Breast Cancer Predictor</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-</head>
-<body class="bg-white text-gray-800"> -->
-
-  <!-- Navbar -->
-
-  <!-- <nav class="bg-pink-500 text-white py-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <h1 class="text-2xl font-bold">🩺 BCPredict</h1>
-      <div class="space-x-6">
-        <a href="/" class="hover:underline">Home</a>
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#services" class="hover:underline">Services</a>
-        <a href="/predictor" class="bg-white text-pink-500 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition">Try Predictor</a>
-      </div>
-    </div>
-  </nav> -->
-
-  <!-- Hero Section -->
-
-  <!-- <section class="bg-gradient-to-r from-pink-100 to-purple-200 py-20 text-center">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-10 px-4">
-      <div class="md:w-1/2">
-        <h2 class="text-4xl font-bold mb-4">Breast Cancer Prediction System</h2>
-        <p class="text-lg mb-6">Fast, accurate and secure prediction using Machine Learning</p>
-        <a href="/predictor" class="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition">Get Started</a>
-      </div>
-      <div class="md:w-1/3">
-        <lottie-player src="https://lottie.host/f4be78db-4e15-41ad-88db-4f845785c44c/HhV0JJKETi.json" background="transparent" speed="1" loop autoplay></lottie-player>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- About Section -->
-
-  <!-- <section id="about" class="py-16 bg-white">
-    <div class="container mx-auto px-6 text-center max-w-4xl">
-      <h3 class="text-3xl font-bold text-pink-600 mb-4">About This Project</h3>
-      <p class="text-gray-700 text-lg">
-        This breast cancer prediction system is developed using machine learning models trained on real-world data. The system predicts whether the tumor is <strong>malignant</strong> or <strong>benign</strong> based on clinical parameters. It aims to assist in early detection and awareness.
-      </p>
-    </div>
-  </section> -->
-
-  <!-- Services Section -->
-
-  <!-- <section id="services" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold text-pink-600 mb-10">Our Features</h3>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold text-pink-600 mb-2">💻 Easy Interface</h4>
-          <p>Simple and responsive UI for patients and professionals to use.</p>
-        </div>
-        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold text-pink-600 mb-2">⚡ Fast Prediction</h4>
-          <p>Get your results instantly with our optimized ML model.</p>
-        </div>
-        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold text-pink-600 mb-2">🔒 Data Privacy</h4>
-          <p>Your input data is never stored or shared with anyone.</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Contact Section -->
-
-  <!-- <section id="contact" class="py-16 bg-white">
-    <div class="container mx-auto px-6 max-w-xl text-center">
-      <h3 class="text-3xl font-bold text-pink-600 mb-6">Contact Us</h3>
-      <form action="#" class="space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400">
-        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400">
-        <textarea rows="4" placeholder="Your Message" class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400"></textarea>
-        <button class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">Send Message</button>
-      </form>
-    </div>
-  </section> -->
-
-  <!-- Footer -->
-
-  <!-- <footer class="bg-pink-500 text-white py-4 text-center">
-    <p>&copy; 2025 Breast Cancer Predictor | Built with ❤️ by Sahil</p>
-  </footer>
-
-</body>
-</html> -->
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome | Breast Cancer Predictor</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<h1>Breast Cancer Prediction System</h1>
-<p>Powered by Machine Learning</p>
-<a href="/predictor">Start Prediction</a>
-
-<section>
-  <h2>What This Does</h2>
-  <p>This tool helps you detect the chances of breast cancer based on medical input parameters.</p>
-</section>
-
-<section>
-  <h2>Why Use This?</h2>
-  <ul>
-    <li>🔍 Simple & Fast</li>
-    <li>🤖 ML Powered</li>
-    <li>🔐 Secure</li>
-  </ul>
-</section>
-
-<footer>
-  <p>Created by Mohd Sahil • GitHub | Contact</p>
-</footer>
-<!
-<body class="home">
-  <div class="container">
-    <h1>🔬 Breast Cancer Prediction System</h1>
-    <p>This system predicts the likelihood of breast cancer using ML 🧠</p>
-    <a href="{{ url_for('predictor') }}" class="button">Start Prediction</a>
-  </div>
-</body> -->
-<!-- </html> --> -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Breast Cancer Predictor</title>
+    <title>Home | Breast Cancer Predictor</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
+
 <body class="bg-pink-50 text-gray-800">
+    <!-- Navbar -->
+
+    <nav class="bg-pink-500 text-black font-bold py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">🩺 BCPredict</h1>
+            <div class="space-x-6">
+                <a href="/" class="hover:underline">Home</a>
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#services" class="hover:underline">Services</a>
+                <a href="/predictor"
+                    class="bg-white text-pink-500 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition">Try
+                    Predictor</a>
+            </div>
+        </div>
+    </nav>
+
+
     <!-- Hero Section -->
-    <section class="bg-pink-200 py-20 text-center shadow-lg">
-        <h1 class="text-4xl font-bold mb-4">🩺 Breast Cancer Prediction System</h1>
-        <p class="text-lg mb-6">An AI-powered tool to detect breast cancer using medical parameters.</p>
-        <a href="{{ url_for('predictor') }}" class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition">
+    <section class="relative text-center py-20 text-black overflow-hidden">
+    <div class="absolute inset-0  opacity-50 blur-sm z-0
+    bg-[url('/static/5bg.jpg')] bg-cover bg-center bg-no-repeat py-20 text-center shadow-lg"></div>
+    <!-- Content Layer -->
+    <div class="relative z-10 bg-black bg-opacity-20 p-10 rounded-xl inline-block">
+
+        <h1 class="py-16 ">
+            <div class="container mx-auto px-6 text-center font-bold max-w-4xl text-4xl  mb-4"> 🩺 Breast Cancer
+                Prediction System
+        </h1>
+
+        <p class="text-black text-1xl mb-6 font-bold">An AI-powered tool to detect breast cancer using medical
+            parameters.
+        </p><br>
+
+        <a href="{{ url_for('predictor') }}"
+            class="bg-pink-600 text-2xl text-white px-6 py-5 rounded-full hover:bg-pink-700 transition font-bold">
             🔬 Start Prediction
         </a>
     </section>
 
     <!-- About Section -->
-    <section class="py-12 px-6 md:px-20 bg-white">
-        <h2 class="text-2xl font-semibold mb-4">About the Project</h2>
-        <p class="text-lg">This system uses machine learning to help doctors and patients predict the likelihood of breast cancer based on clinical data.</p>
-    </section>
-
-    <!-- Features -->
-    <section class="py-12 bg-pink-100 px-6 md:px-20">
-        <h2 class="text-2xl font-semibold mb-8 text-center">Why Use This Tool?</h2>
-        <div class="grid md:grid-cols-4 gap-6 text-center">
-            <div class="bg-white p-6 rounded-xl shadow">⚡ Fast Prediction</div>
-            <div class="bg-white p-6 rounded-xl shadow">👌 Easy to Use</div>
-            <div class="bg-white p-6 rounded-xl shadow">🎯 Accurate ML Model</div>
-            <div class="bg-white p-6 rounded-xl shadow">🔒 Secure & Private</div>
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h3 class="text-3xl font-bold text-pink-600 mb-4">About This Project</h3>
+            <p class="text-gray-700 text-lg">
+                This breast cancer prediction system is developed using machine learning models trained on real-world
+                data. The system predicts whether the tumor is <strong>malignant</strong> or <strong>benign</strong>
+                based on clinical parameters. It aims to assist in early detection and awareness.
+            </p>
         </div>
     </section>
 
+
+
+    <!-- Services / Features -->
+    <section id="services" class="py-16 bg-pink-100 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10 text-center">Why Use This Tool?</h2>
+            <div class="grid md:grid-cols-4 gap-10 text-center">
+                <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-pink-600 mb-2">⚡ Fast Prediction</h4>
+                    <p>Get your results instantly with our optimized ML model.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-pink-600 mb-2">💻 Easy Interface</h4>
+                    <p>Simple and responsive UI for patients and professionals to use.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-pink-600 mb-2">🤖 Accurate ML Model</h4>
+                    <p>Trained on real medical data for reliable performance.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-pink-600 mb-2">🔒 Data Privacy</h4>
+                    <p>Your input data is never stored or shared with anyone.</p>
+                </div>
+            </div>
+    </section>
+
     <!-- How it Works -->
-    <section class="py-12 px-6 md:px-20 bg-white text-center">
+    <section class="py-12 px-6 md:px-20 bg-gray-200 text-center">
         <h2 class="text-2xl font-semibold mb-6">How It Works</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <div>
@@ -189,17 +106,43 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="text-center py-12 bg-pink-200">
-        <a href="{{ url_for('predictor') }}" class="text-xl font-semibold bg-pink-600 text-white px-8 py-3 rounded-full hover:bg-pink-700">
+    <section class="text-center py-12 bg-pink-100">
+        <a href="{{ url_for('predictor') }}"
+            class="text-xl font-semibold bg-pink-600 text-white px-8 py-3 rounded-full hover:bg-pink-700">
             🚀 Try It Now
         </a>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-6 text-center bg-white text-sm">
-        Created by <strong>Mohd Sahil</strong> | 
-        <a href="https://github.com/radcoder" class="text-pink-600 hover:underline" target="_blank">GitHub</a> | 
+   <!-- Contact Section -->
+<section id="contact" class="relative py-20 overflow-hidden">
+    <!-- Blurred Background Image -->
+    <div class="absolute inset-0 bg-[url('/static/5bg.jpg')] bg-cover bg-center blur-sm opacity-80 z-0"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 container mx-auto px-6 max-w-xl text-center bg-gray-200 bg-opacity-90 rounded-xl shadow-lg">
+        <h3 class="py-8 text-3xl font-bold text-pink-600">Contact Us</h3>
+        <form action="#" class="space-y-4 pb-8">
+            <input type="text" placeholder="Your Name"
+                class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400">
+            <input type="email" placeholder="Your Email"
+                class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400">
+            <textarea rows="4" placeholder="Your Message"
+                class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400"></textarea>
+            <button class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">Send Message</button>
+        </form>
+    </div>
+</section>
+
+  <!-- Footer -->
+<footer class="bg-pink-200 py-10 text-center text-sm">
+    <p class="text-base mb-2">&copy; 2025 <strong>Breast Cancer Predictor</strong></p>
+    <p class="text-base">
+        Created by <strong>Mohd Sahil ❤️</strong> |
+        <a href="https://github.com/radecoder" class="text-pink-600 hover:underline" target="_blank">GitHub</a> |
         Version 1.0
-    </footer>
+    </p>
+</footer>
+
 </body>
+
 </html>
