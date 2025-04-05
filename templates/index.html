@@ -1,0 +1,60 @@
+<!-- templates/index.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breast Cancer Prediction</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-purple-200 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white shadow-2xl rounded-2xl p-10 w-full max-w-4xl">
+    <h1 class="text-3xl font-bold text-center text-pink-600 mb-8">🩺 Breast Cancer Predictor</h1>
+
+    <form action="/predict" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {% for field in ['radius_mean', 'perimeter_mean', 'area_mean', 'concave points_mean', 'radius_worst', 'perimeter_worst', 'area_worst', 'concave points_worst'] %}
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">{{ field.replace('_', ' ').title() }}</label>
+        <input type="number" step="any" name="{{ field }}" required
+          class="w-full p-3 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" />
+      </div>
+      {% endfor %}
+      <div class="sm:col-span-2 text-center">
+        <button type="submit"
+          class="bg-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-600 transition duration-300 ease-in-out shadow-md">
+          🔍 Predict
+        </button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predictor - Breast Cancer System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-100 min-h-screen flex items-center justify-center">
+    <div class="bg-pink-150 p-10 rounded-xl shadow-2xl w-full max-w-3xl">
+        <h2 class="text-3xl font-bold mb-6 text-center text-pink-700">🩺 Breast Cancer Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {% for field in ['radius_mean', 'perimeter_mean', 'area_mean', 'concavity_mean', 'concave_points_mean', 'radius_worst', 'perimeter_worst', 'area_worst', 'concavity_worst', 'concave_points_worst'] %}
+                <div>
+                    <label class="block text-base font-medium text-gray-900 capitalize">{{ field.replace('_', ' ') }}</label>
+                    <input type="number" step="any" name="{{ field }}" required class="mt-1 p-2 w-full border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500">
+                </div>
+            {% endfor %}
+            <div class="col-span-full text-center mt-4">
+                <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">
+                    🔍 Predict Now
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

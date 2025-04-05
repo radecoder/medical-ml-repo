@@ -1,0 +1,62 @@
+<!-- templates/result.html -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Result | Breast Cancer Predictor</title> --> -->
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prediction Result</title> -->
+
+<!-- <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-100 via-pink-100 to-yellow-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-10 rounded-3xl shadow-2xl max-w-xl text-center">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">🧬 Prediction Result</h2>
+    {% if prediction == 1 %}
+      <p class="text-2xl font-semibold text-red-600">🔴 Malignant (Cancer Detected)</p>
+    {% else %}
+      <p class="text-2xl font-semibold text-green-600">🟢 Benign (No Cancer Detected)</p>
+    {% endif %}
+    <a href="{{ url_for('predictor') }}" class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700"> 🔙 Back to Form</a>
+  </div>
+</body> 
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result | Breast Cancer Predictor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-100 via-pink-100 to-yellow-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-10 rounded-xl shadow-xl text-center max-w-md">
+        <h2 class="text-3xl font-bold mb-6 text-pink-800">🔎🧬 Prediction Result</h2>
+        <p class="text-2xl font-semibold text-green-800 mb-6">{{ prediction }}</p>
+        <a href="{{ url_for('predictor') }}" class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700">
+            🔁 Try Again
+        </a>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="result-page">
+  <div class="container result-box">
+    <h2>Prediction Result</h2>
+    <p class="result">{{ prediction }}</p>
+    <a href="{{ url_for('predictor') }}" class="button">Predict Again</a>
+    <a href="{{ url_for('home') }}" class="back-link">🏠 Home</a>
+  </div>
+</body>
+</html> -->
+
