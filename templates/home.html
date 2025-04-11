@@ -3,56 +3,67 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home | Breast Cancer Predictor</title>
+    <title>Breast Cancer Predictor | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class' // Enable class-based dark mode
+        }
+    </script>
+
 </head>
 
-<body class="bg-pink-50 text-gray-800">
-    <!-- Navbar -->
+<body
+    class="bg-gradient-to-r from-purple-100 via-pink-100 to-yellow-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-black dark:text-white min-h-screen flex flex-col">
 
-    <nav class="bg-pink-500 text-black font-bold py-4 shadow-md">
+    <!-- Navbar -->
+    <nav class="bg-pink-300 dark:bg-gray-900 text-black dark:text-white font-bold py-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center px-4">
             <h1 class="text-2xl font-bold">🩺 BCPredict</h1>
-            <div class="space-x-6">
+            <div class="space-x-4 flex items-center">
                 <a href="/" class="hover:underline">Home</a>
                 <a href="#about" class="hover:underline">About</a>
                 <a href="#services" class="hover:underline">Services</a>
                 <a href="/predictor"
-                    class="bg-white text-pink-500 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition">Try
-                    Predictor</a>
+                    class="bg-white dark:bg-pink-600 dark:text-white text-pink-500 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-pink-700 transition">
+                    Try Predictor
+                </a>
+                <button onclick="toggleTheme()"
+                    class="bg-gray-700 text-white px-3 py-2 rounded-md hover:bg-gray-600 transition">
+                    🌗 Toggle Dark Mode
+                </button>
             </div>
         </div>
     </nav>
 
 
     <!-- Hero Section -->
-    <section class="relative text-center py-20 text-black overflow-hidden">
-    <div class="absolute inset-0  opacity-50 blur-sm z-0
-    bg-[url('/static/5bg.jpg')] bg-cover bg-center bg-no-repeat py-20 text-center shadow-lg"></div>
-    <!-- Content Layer -->
-    <div class="relative z-10 bg-black bg-opacity-20 p-10 rounded-xl inline-block">
-
-        <h1 class="py-16 ">
-            <div class="container mx-auto px-6 text-center font-bold max-w-4xl text-4xl  mb-4"> 🩺 Breast Cancer
-                Prediction System
-        </h1>
-
-        <p class="text-black text-1xl mb-6 font-bold">An AI-powered tool to detect breast cancer using medical
-            parameters.
-        </p><br>
-
-        <a href="{{ url_for('predictor') }}"
-            class="bg-pink-600 text-2xl text-white px-6 py-5 rounded-full hover:bg-pink-700 transition font-bold">
-            🔬 Start Prediction
-        </a>
+    <section class="relative text-center py-20 text-black   dark:text-white overflow-hidden">
+        <div class="absolute inset-0  opacity-50 blur-sm z-0
+     bg-[url('/static/5bg.jpg')] bg-cover bg-center bg-no-repeat "></div> <!--py-20 text-center shadow-lg -->
+        <!-- Content Layer -->
+     
+        <div
+            class="relative z-10 bg-white bg-opacity-40 dark:bg-gray-900 dark:bg-opacity-70 p-10 rounded-xl inline-block">
+            <h1 class="py-16 text-4xl font-bold">
+                🩺 Breast Cancer Prediction System
+            </h1>
+            <p class="text-black dark:text-gray-300 text-lg font-bold mb-6">
+                An AI-powered tool to detect breast cancer using medical parameters.
+            </p>
+            <a href="{{ url_for('predictor') }}"
+                class="bg-pink-500 text-2xl text-black-500 dark:bg-pink-600 dark:text-white px-6 py-5 rounded-full hover:bg-pink-700 transition font-bold">
+                <!-- class="bg-white dark:bg-pink-600 dark:text-white text-pink-500 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-pink-700 transition"> -->
+                🔬 Start Prediction
+            </a>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-pink-200 dark:bg-gray-800">
         <div class="container mx-auto px-6 text-center max-w-4xl">
-            <h3 class="text-3xl font-bold text-pink-600 mb-4">About This Project</h3>
-            <p class="text-gray-700 text-lg">
+            <h3 class="text-3xl font-bold text-pink-600 dark:text-pink-400 mb-4">About This Project</h3>
+            <p class="text-gray-700 dark:text-gray-300 text-lg">
                 This breast cancer prediction system is developed using machine learning models trained on real-world
                 data. The system predicts whether the tumor is <strong>malignant</strong> or <strong>benign</strong>
                 based on clinical parameters. It aims to assist in early detection and awareness.
@@ -63,33 +74,46 @@
 
 
     <!-- Services / Features -->
-    <section id="services" class="py-16 bg-pink-100 px-6">
+    <!-- <section id="services" class="py-16 bg-pink-200 dark:bg-gray-900 px-6">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-10 text-center">Why Use This Tool?</h2>
+            <h2 class="text-3xl font-bold mb-10 text-pink-600 text-center">Why Use This Tool?</h2>
             <div class="grid md:grid-cols-4 gap-10 text-center">
                 <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
                     <h4 class="text-xl font-semibold text-pink-600 mb-2">⚡ Fast Prediction</h4>
                     <p>Get your results instantly with our optimized ML model.</p>
+                </div> -->
+    <section id="services" class="py-16 bg-pink-200 dark:bg-gray-900 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10 text-pink-600 dark:text-pink-400">Why Use This Tool?</h2>
+            <div class="grid md:grid-cols-4 gap-10 text-center">
+                <div
+                    class="bg-white dark:bg-gray-800 text-black dark:text-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-pink-600 dark:text-pink-400 mb-2">⚡ Fast Prediction</h4>
+                    <p>Get your results instantly with our optimized ML model.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-                    <h4 class="text-xl font-semibold text-pink-600 mb-2">💻 Easy Interface</h4>
+
+                <div
+                    class="bg-white dark:bg-gray-800 text-black dark:text-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-pink-600 dark:text-pink-400 mb-2">💻 Easy Interface</h4>
                     <p>Simple and responsive UI for patients and professionals to use.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-                    <h4 class="text-xl font-semibold text-pink-600 mb-2">🤖 Accurate ML Model</h4>
+                <div
+                    class="bg-white dark:bg-gray-800 text-black dark:text-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-pink-600 dark:text-pink-400 mb-2">🤖 Accurate ML Model</h4>
                     <p>Trained on real medical data for reliable performance.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-                    <h4 class="text-xl font-semibold text-pink-600 mb-2">🔒 Data Privacy</h4>
+                <div
+                    class="bg-white dark:bg-gray-800 text-black dark:text-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-pink-600 dark:text-pink-400 mb-2">🔒 Data Privacy</h4>
                     <p>Your input data is never stored or shared with anyone.</p>
                 </div>
             </div>
     </section>
 
     <!-- How it Works -->
-    <section class="py-12 px-6 md:px-20 bg-gray-200 text-center">
-        <h2 class="text-2xl font-semibold mb-6">How It Works</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+    <section class="py-12 px-6 md:px-20 bg-gray-200 dark:bg-gray-900 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-pink-600 dark:text-pink-400">How It Works</h2>
+        <div class="grid md:grid-cols-3 text-pink-600 dark:text-pink-400 gap-8">
             <div>
                 <span class="text-4xl">1️⃣</span>
                 <p>Enter your medical data</p>
@@ -106,42 +130,57 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="text-center py-12 bg-pink-100">
+    <section class="text-center py-12 bg-pink-100 dark:bg-gray-800">
         <a href="{{ url_for('predictor') }}"
-            class="text-xl font-semibold bg-pink-600 text-white px-8 py-3 rounded-full hover:bg-pink-700">
-            🚀 Try It Now
+          class="text-xl font-semibold bg-pink-600 text-white px-8 py-3 rounded-full hover:bg-pink-700">
+          🚀 Try It Now
         </a>
-    </section>
+      </section>
 
-   <!-- Contact Section -->
-<section id="contact" class="relative py-20 overflow-hidden">
-    <!-- Blurred Background Image -->
-    <div class="absolute inset-0 bg-[url('/static/5bg.jpg')] bg-cover bg-center blur-sm opacity-80 z-0"></div>
-
-    <!-- Content -->
-    <div class="relative z-10 container mx-auto px-6 max-w-xl text-center bg-gray-200 bg-opacity-90 rounded-xl shadow-lg">
-        <h3 class="py-8 text-3xl font-bold text-pink-600">Contact Us</h3>
-        <form action="#" class="space-y-4 pb-8">
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('/static/5bg.jpg')] bg-cover bg-center blur-sm opacity-90 z-0"></div>
+        <div class="relative z-10 container mx-auto px-6 max-w-xl text-center bg-pink-100 dark:bg-gray-800 bg-opacity-90 dark:bg-opacity-90 rounded-xl shadow-lg">
+          <h3 class="py-8 text-3xl font-bold text-pink-600 dark:text-pink-400">Contact Us</h3>
+          <form class="space-y-4 pb-8">
             <input type="text" placeholder="Your Name"
-                class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400">
+              class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400 bg-gray-300 dark:bg-gray-700 text-black dark:text-white">
             <input type="email" placeholder="Your Email"
-                class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400">
+              class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400 bg-gray-300 dark:bg-gray-700 text-black dark:text-white">
             <textarea rows="4" placeholder="Your Message"
-                class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400"></textarea>
-            <button class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">Send Message</button>
-        </form>
-    </div>
-</section>
+              class="w-full px-4 py-3 border rounded-xl focus:outline-pink-400 bg-gray-300 dark:bg-gray-700 text-black dark:text-white"></textarea>
+            <button class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-400">Send Message</button>
+          </form>
+        </div>
+      </section>
 
-  <!-- Footer -->
-<footer class="bg-pink-200 py-10 text-center text-sm">
-    <p class="text-base mb-2">&copy; 2025 <strong>Breast Cancer Predictor</strong></p>
-    <p class="text-base">
-        Created by <strong>Mohd Sahil ❤️</strong> |
-        <a href="https://github.com/radecoder" class="text-pink-600 hover:underline" target="_blank">GitHub</a> |
-        Version 1.0
-    </p>
-</footer>
+    <!-- Footer -->
+    <footer class="bg-pink-200 dark:bg-gray-900 py-10 text-center text-gray-700 dark:text-gray-300 text-sm">
+        <p class="text-base mb-2">&copy; 2025 <strong>Breast Cancer Predictor</strong></p>
+        <p class="text-base">
+          Created by <strong>Prerna ❤️</strong> |
+          <a href="https://github.com/radecoder" class="text-pink-600 hover:underline" target="_blank">GitHub</a> |
+          Version 1.0
+        </p>
+      </footer>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        });
+    </script>
+
 
 </body>
 
